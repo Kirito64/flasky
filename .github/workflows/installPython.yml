@@ -1,0 +1,12 @@
+name: Set up and Dipslay python's versioin
+on : [push]
+jobs:
+  check-pythons-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v2
+      - name: set up Python
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - run: python --version
